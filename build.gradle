@@ -187,10 +187,10 @@ publishing {
     repositories {
         maven {
             credentials {
-                username project.properties.forgeMavenUser?:'fake'
-                password project.properties.forgeMavenPassword?:'news'
+                username project.properties['wutee.repository.deploy.username'] ?: 'fake'
+                password project.properties['wutee.repository.deploy.password'] ?: 'news'
             }
-            url 'http://files.minecraftforge.net/maven/manage/upload'
+            url 'https://repo.wut.ee/repository/mikroskeem-repo'
         }
     }
 }
